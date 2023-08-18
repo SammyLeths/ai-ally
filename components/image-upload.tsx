@@ -10,7 +10,7 @@ interface ImageUploadProps {
   disabled?: boolean;
 }
 
-export const ImageUplaod = ({
+export const ImageUpload = ({
   value,
   onChange,
   disabled,
@@ -28,6 +28,7 @@ export const ImageUplaod = ({
   return (
     <div className="space-y-4 w-full flex flex-col justify-center items-center">
       <CldUploadButton
+        onUpload={(result: any) => onChange(result.info.secure_url)}
         options={{
           maxFiles: 1,
         }}
@@ -36,7 +37,8 @@ export const ImageUplaod = ({
         <div className="p-4 border-4 border-dashed border-primary/10 rounded-lg hover:opacity-75 transition flex flex-col space-y-2 items-center justify-center">
           <div className="relative h-40 w-40">
             <Image
-              src="/placeholder.svg"
+              fill
+              src={value || "/placeholder.svg"}
               alt="Upload"
               className="rounded-lg object-cover"
             />
