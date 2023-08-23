@@ -42,6 +42,9 @@ export const ChatHeader = ({ companion }: ChatHeaderProps) => {
       toast({
         description: "Success",
       });
+
+      router.refresh();
+      router.push("/");
     } catch (error) {
       toast({
         description: "Something went wrong.",
