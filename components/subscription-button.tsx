@@ -5,6 +5,7 @@ import { Sparkles } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 interface SubscriptionButtonProps {
   isPro: boolean;
@@ -15,12 +16,14 @@ export const SubscriptionButton = ({
 }: SubscriptionButtonProps) => {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
+  const router = useRouter();
 
   const onClick = async () => {
     try {
       setLoading(true);
       const response = await axios.get("/api/stripe");
       window.location.href = response.data.url;
+      //router.refresh();
     } catch (error) {
       toast({
         variant: "destructive",
@@ -28,6 +31,7 @@ export const SubscriptionButton = ({
       });
     } finally {
       setLoading(false);
+      router.refresh();
     }
   };
 

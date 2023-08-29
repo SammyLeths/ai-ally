@@ -13,6 +13,7 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 export const ProModal = () => {
   const proModal = useProModal();
@@ -20,6 +21,8 @@ export const ProModal = () => {
 
   const [loading, setLoading] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+
+  const router = useRouter();
 
   useEffect(() => {
     setIsMounted(true);
@@ -31,6 +34,7 @@ export const ProModal = () => {
 
       const response = await axios.get("/api/stripe");
       window.location.href = response.data.url;
+      //router.refresh();
     } catch (error) {
       toast({
         variant: "destructive",
@@ -38,6 +42,7 @@ export const ProModal = () => {
       });
     } finally {
       setLoading(false);
+      router.refresh();
     }
   };
 
