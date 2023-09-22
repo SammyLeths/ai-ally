@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 import { ProModal } from "@/components/pro-modal";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
             {children}
             <Toaster />
           </ThemeProvider>
+          <Footer />
         </body>
       </html>
     </ClerkProvider>
