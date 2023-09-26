@@ -18,8 +18,7 @@ This project was developed using React, NextJS, TypeScript, Pinecone, Tailwind C
 
 <h2>Screenshots</h2>
 
-![ai-ally](https://github.com/SammyLeths/ai-ally/assets/64320618/733a1f87-a2f7-43ee-b333-0fe0563702cc)
-
+![proj12-ai-ally](https://github.com/SammyLeths/ai-ally/assets/64320618/4ccee0c9-b505-4679-8473-e348d47efa41)
 
 <h2>Links</h2>
 
