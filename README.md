@@ -68,6 +68,9 @@ This project was developed using React, NextJS, TypeScript, Pinecone, Tailwind C
   <li>
     <b><a href="https://www.pinecone.io/" target="_blank">PINECONE</a></b>: Long-Term Memory for AI -  Fully-managed, developer-friendly, and easily scalable vector database.
   </li>
+    <li>
+    <b><a href="https://openai.com/" target="_blank">OPENAI</a></b>: AI-powered language model
+  </li>
   <li>
     <b><a href="https://www.mysql.com/" target="_blank">MYSQL</a></b>: Open-source relational database management system.
   </li>
